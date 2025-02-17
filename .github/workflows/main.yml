@@ -1,0 +1,27 @@
+name: Mirror
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+env:
+  MIRROR_URL: "git@github.com:Lxdovic/CastledLanding.git"
+
+jobs:
+  push_to_mirror:
+    name: Push to Private Repo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Cloning to mirror
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            ${{ env.MIRROR_URL }}
+          ssh_private_key:
+            ${{ secrets.MIRROR_SSH }}
