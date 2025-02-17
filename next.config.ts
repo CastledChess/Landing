@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
+import nextra from "nextra";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withNextra = nextra({});
+
+export default withNextra({
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
@@ -11,6 +12,4 @@ const nextConfig: NextConfig = {
 
     return config;
   },
-};
-
-export default nextConfig;
+});
