@@ -48,7 +48,7 @@ const Background = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 2, delay: 1 } }}
-        className="absolute top-0 left-0 -z-10 h-full  w-full"
+        className="absolute top-0 left-0 h-full [mask-image:url(/images/grain.svg)] w-full"
       >
         <Canvas
           orthographic={true}
@@ -57,7 +57,7 @@ const Background = () => {
           <ShaderObject />
         </Canvas>
       </motion.div>
-      {/*<div className="h-full w-full -z-10 absolute top-0 left-0 bg-[radial-gradient(circle_at_center_100%,var(--tw-gradient-stops))] from-transparent via-background via-60% to-background" />*/}
+      <div className="h-full w-full absolute top-0 left-0 bg-radial from-transparent via-background via-60% to-background" />
     </>
   );
 };
