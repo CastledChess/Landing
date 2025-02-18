@@ -60,7 +60,6 @@ export default async function RootLayout({ children }: Props) {
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
           footer={footer}
-          // ... Your additional layout options
         >
           {children}
         </Layout>

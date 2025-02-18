@@ -11,7 +11,7 @@ export const Hero = () => {
 
       <div className="h-full relative mx-auto container flex flex-col px-6 md:px-26 lg:px-30 2xl:px-40 pt-40 pb-0">
         <div className="h-full flex flex-col gap-10 text-3xl">
-          <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl flex flex-col gap-4 w-full mix-blend-difference font-mono font-semibold tracking-tighter text-balance text-center bg-gradient-to-br text-transparent from-foreground to-foreground/60 bg-clip-text">
+          <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl flex flex-col gap-4 w-full font-mono font-semibold tracking-tighter text-balance text-center bg-gradient-to-br text-transparent from-foreground to-foreground/60 bg-clip-text">
             Chess Analysis, for free, for everyone
           </span>
           <p className="text-balanced text-center text-white/80 mix-blend-difference font-medium text-lg lg:text-xl">
