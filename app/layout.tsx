@@ -6,6 +6,7 @@ import { getPageMap } from "nextra/page-map";
 import Image from "next/image";
 import "./globals.css";
 import "nextra-theme-docs/style.css";
+import { ThemeImage } from "@/components/themeImage/theme-image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,13 +27,26 @@ const navbar = (
   <Navbar
     logo={
       <span className="text-xl font-bold flex gap-2 ">
-        <Image src="/logo.svg" alt="Castled" width={30} height={30} />
+        <ThemeImage
+          darkImage={{
+            src: "/logo.svg",
+            alt: "Castled",
+            width: 30,
+            height: 30,
+          }}
+          lightImage={{
+            src: "/logo-light.svg",
+            alt: "Castled",
+            width: 30,
+            height: 30,
+          }}
+        />
         Castled
       </span>
     }
   />
 );
-const footer = <Footer>MIT {new Date().getFullYear()} © Castled.</Footer>;
+const footer = <Footer>{new Date().getFullYear()} © Castled.</Footer>;
 
 type Props = {
   children: React.ReactNode;
