@@ -6,13 +6,16 @@ import { useThree, useFrame } from "@react-three/fiber";
 import { Vector2 } from "three";
 import * as THREE from "three";
 import vertexShader from "!!raw-loader!@/components/background/vertex.glsl";
-import fragmentShader from "!!raw-loader!@/components/background/fragment.glsl";
+import fragmentShaderDark from "!!raw-loader!@/components/background/fragment.glsl";
+import fragmentShaderLight from "!!raw-loader!@/components/background/fragment-light.glsl";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const ShaderObject = () => {
   const mesh = useRef<THREE.Mesh>(null);
 
   const { size } = useThree();
+  const { theme } = useTheme();
 
   const uniforms = useMemo(
     () => ({
@@ -36,7 +39,9 @@ const ShaderObject = () => {
       <shaderMaterial
         uniforms={uniforms}
         vertexShader={vertexShader}
-        fragmentShader={fragmentShader}
+        fragmentShader={
+          theme === "light" ? fragmentShaderLight : fragmentShaderDark
+        }
       />
     </mesh>
   );

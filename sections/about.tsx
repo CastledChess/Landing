@@ -1,7 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Icon } from "@iconify/react";
 import { Button } from "@/components/ui/button";
+import { ThemeImage } from "@/components/themeImage/theme-image";
 
 export const About = () => {
   return (
@@ -12,21 +13,23 @@ export const About = () => {
         </p>
 
         <div className="flex gap-10 text-3xl w-full items-center justify-center pt-10">
-          <Image
-            src="/images/chess.png"
-            alt="Chess.com"
-            width={100}
-            height={100}
+          <ThemeImage
+            lightImage={{
+              src: "/images/chess-light.png",
+              alt: "Chess.com",
+              width: 100,
+              height: 30,
+            }}
+            darkImage={{
+              src: "/images/chess.png",
+              alt: "Chess.com",
+              width: 100,
+              height: 30,
+            }}
           />
 
           <span className="flex text-xl gap-1 items-center">
-            <Image
-              src="/images/lichess.svg"
-              alt="Stockfish"
-              width={100}
-              height={100}
-              className="h-10 w-10"
-            />
+            <Icon icon="simple-icons:lichess" width={30} height={30} />
             Lichess
           </span>
         </div>
@@ -37,7 +40,7 @@ export const About = () => {
         <h2 className="text-center text-4xl text-foreground font-semibold">
           Analyse games with Stockfish
         </h2>
-        <p className="text-balanced text-center text-white/80 mix-blend-difference font-thin text-lg lg:text-xl">
+        <p className="text-balanced text-center text-foreground/80 mix-blend-difference font-thin text-lg lg:text-xl">
           Castled uses Stockfish, the strongest open-source chess engine, to
           analyse your games.
         </p>

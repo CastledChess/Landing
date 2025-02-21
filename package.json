@@ -10,6 +10,7 @@
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"
   },
   "dependencies": {
+    "@iconify/react": "^5.2.0",
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-select": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.2",
