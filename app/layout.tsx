@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Footer, Layout, Navbar } from "nextra-theme-docs";
 import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
-import Image from "next/image";
 import "./globals.css";
 import "nextra-theme-docs/style.css";
 import { ThemeImage } from "@/components/themeImage/theme-image";
