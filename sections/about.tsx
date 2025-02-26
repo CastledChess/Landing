@@ -45,7 +45,10 @@ export const About = () => {
           analyse your games.
         </p>
 
-        <Link href="https://castled.app" className="self-center text-lg mt-20">
+        <Link
+          href="https://analysis.castled.app"
+          className="self-center text-lg mt-20"
+        >
           <Button>Let&#39;s Analyse</Button>
         </Link>
       </div>

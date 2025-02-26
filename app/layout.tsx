@@ -69,6 +69,9 @@ export default async function RootLayout({ children }: Props) {
 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Layout
+          nextThemes={{
+            defaultTheme: "dark",
+          }}
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"

@@ -18,7 +18,7 @@ export const Hero = () => {
             Simple, efficient chess analysis at no cost
           </p>
           <Link
-            href="https://castled.app"
+            href="https://analysis.castled.app"
             className="self-center text-lg mt-20"
           >
             <Button className="self-center text-lg">Let&#39;s Analyse</Button>
